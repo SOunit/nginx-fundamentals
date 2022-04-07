@@ -6,4 +6,5 @@ services:
       - "8080:80"
     volumes:
       - ./sites/demo:/sites/demo
-      - ./default.conf:/etc/nginx/conf.d/default.conf
+      # - ./default.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx.conf:/etc/nginx/nginx.conf

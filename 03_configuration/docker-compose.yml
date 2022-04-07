@@ -5,4 +5,5 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./conf:/conf
+      - ./src:/src
+      - ./default.conf:/etc/nginx/conf.d/default.conf

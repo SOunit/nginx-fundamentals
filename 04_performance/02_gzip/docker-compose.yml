@@ -1,0 +1,16 @@
+version: "3"
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./sites/demo:/sites/demo
+      # - ./default.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    links:
+      - php
+  php:
+    image: php:7-fpm
+    volumes:
+      - ./sites/demo:/sites/demo
